@@ -8,7 +8,7 @@ public class StringSchema extends BaseSchemas {
     }
 
     public StringSchema require() {
-        addCheck("Require check", value -> (value) != null);
+        addCheck("Require check", value -> !((value) == null || value instanceof String && ((String) value).isEmpty()));
         return this;
     }
 
