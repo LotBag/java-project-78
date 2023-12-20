@@ -18,8 +18,8 @@ public class StringSchemaTest {
     }
 
     @Test
-    public void addRequireTest() {
-        schema.require();
+    public void addRequiredTest() {
+        schema.required();
 
         assertFalse(schema.isValid(null));
         assertFalse(schema.isValid(""));

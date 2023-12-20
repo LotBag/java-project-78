@@ -1,13 +1,11 @@
 package hexlet.code.schemas;
 
-import java.util.Objects;
-
 public class StringSchema extends BaseSchemas {
     public StringSchema() {
-        addCheck("Is string check", value -> (value ==null) || (value.getClass() == String.class));
+        addCheck("Is string check", value -> (value == null) || (value.getClass() == String.class));
     }
 
-    public StringSchema require() {
+    public StringSchema required() {
         addCheck("Require check", value -> !((value) == null || value instanceof String && ((String) value).isEmpty()));
         return this;
     }
