@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class NumberSchemaTest {
     Validator v = new Validator();
-    NumberSchemas schema = new NumberSchemas();
+    NumberSchemas schema = v.number();
 
     @Test
     public void beforeAddCheck() {
