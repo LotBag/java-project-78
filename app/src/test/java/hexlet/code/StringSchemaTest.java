@@ -7,14 +7,16 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class StringSchemaTest {
-    Validator v = new Validator();
-    StringSchema schema = v.string();
+    private Validator v = new Validator();
+    private StringSchema schema = v.string();
 
     @Test
     public void testBeforeAddCheck() {
+        final int inValidObject = 5;
+
         assertTrue(schema.isValid(""));
         assertTrue(schema.isValid(null));
-        assertFalse(schema.isValid(5));
+        assertFalse(schema.isValid(inValidObject));
     }
 
     @Test

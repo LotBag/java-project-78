@@ -4,7 +4,7 @@ import hexlet.code.schemas.MapSchemas;
 import hexlet.code.schemas.NumberSchemas;
 import hexlet.code.schemas.StringSchema;
 
-public class Validator {
+public final class Validator {
     public StringSchema string() {
         return new StringSchema();
     }

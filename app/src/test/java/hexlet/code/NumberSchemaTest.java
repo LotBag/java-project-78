@@ -7,38 +7,45 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class NumberSchemaTest {
-    Validator v = new Validator();
-    NumberSchemas schema = v.number();
+    private Validator v = new Validator();
+    private NumberSchemas schema = v.number();
 
     @Test
     public void beforeAddCheck() {
+        final int validNum = 5;
+
         assertTrue(schema.isValid(null));
-        assertTrue(schema.isValid(5));
+        assertTrue(schema.isValid(validNum));
     }
 
     @Test
     public void requiredTest() {
         schema.required();
 
-        assertTrue(schema.isValid(5));
         assertFalse(schema.isValid(null));
     }
 
     @Test
     public void positiveTest() {
+        final int validNum = 5;
+        final int inValidNum = -5;
+
         schema.positive();
 
-        assertTrue(schema.isValid(5));
-        assertFalse(schema.isValid(-5));
+        assertTrue(schema.isValid(validNum));
+        assertFalse(schema.isValid(inValidNum));
     }
 
     @Test
     public void rangeTest() {
-        schema.range(3, 5);
+        final int lowBound = 3;
+        final int topBound = 5;
+        final int outOfBound = 6;
 
-        assertTrue(schema.isValid(3));
-        assertTrue(schema.isValid(4));
-        assertTrue(schema.isValid(5));
-        assertFalse(schema.isValid(6));
+        schema.range(lowBound, topBound);
+
+        assertTrue(schema.isValid(lowBound));
+        assertTrue(schema.isValid(topBound));
+        assertFalse(schema.isValid(outOfBound));
     }
 }

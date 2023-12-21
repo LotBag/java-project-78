@@ -11,12 +11,12 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MapSchemasTest {
-    Validator v = new Validator();
-    MapSchemas schema = new MapSchemas();
-    Map<String, String> testMap = new HashMap<>();
+    private Validator v = new Validator();
+    private MapSchemas schema = new MapSchemas();
+    private Map<String, String> testMap = new HashMap<>();
 
     @BeforeEach
-    public void beforeAll() {
+    final void beforeAll() {
         testMap.put("OwO", "UwU");
     }
 

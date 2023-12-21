@@ -2,7 +2,7 @@ package hexlet.code.schemas;
 
 import java.util.HashMap;
 
-public class MapSchemas extends BaseSchemas {
+public final class MapSchemas extends BaseSchemas {
     public MapSchemas() {
         addCheck("It is Map?", value -> (value == null) || (value.getClass() == HashMap.class));
     }

@@ -1,6 +1,6 @@
 package hexlet.code.schemas;
 
-public class NumberSchemas extends BaseSchemas {
+public final class NumberSchemas extends BaseSchemas {
 
     public NumberSchemas() {
         addCheck("It is number", value -> (value == null) || (value.getClass() == Integer.class));
