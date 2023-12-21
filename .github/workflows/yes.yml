@@ -17,11 +17,7 @@ jobs:
       - uses: gradle/gradle-build-action@v2
         with:
           gradle-version: 8.3
-      - name: Build with Gradle
-        uses: gradle/gradle-build-action@v2
-        with:
-          arguments: build
-          build-root-directory: app
+      - run: cd app && ./gradlew clean build
       - name: Publish code coverage
         uses: paambaati/codeclimate-action@v5.0.0
         env:
