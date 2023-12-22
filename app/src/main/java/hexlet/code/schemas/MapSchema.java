@@ -13,7 +13,7 @@ public final class MapSchema extends BaseSchema {
         return this;
     }
 
-    public MapSchema sizeOf(int size) {
+    public MapSchema sizeof(int size) {
         addCheck("Size of check", value -> ((HashMap<?, ?>) value).size() == size);
         return this;
     }

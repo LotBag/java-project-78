@@ -36,7 +36,7 @@ public class MapSchemaTest {
 
     @Test
     public void sizeOfCheckTest() {
-        schema.sizeOf(1);
+        schema.sizeof(1);
 
         assertTrue(schema.isValid(testMap));
 
