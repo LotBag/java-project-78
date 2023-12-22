@@ -1,17 +1,17 @@
 package hexlet.code;
 
-import hexlet.code.schemas.MapSchemas;
-import hexlet.code.schemas.NumberSchemas;
+import hexlet.code.schemas.MapSchema;
+import hexlet.code.schemas.NumberSchema;
 import hexlet.code.schemas.StringSchema;
 
 public final class Validator {
     public StringSchema string() {
         return new StringSchema();
     }
-    public NumberSchemas number() {
-        return new NumberSchemas();
+    public NumberSchema number() {
+        return new NumberSchema();
     }
-    public MapSchemas map() {
-        return new MapSchemas();
+    public MapSchema map() {
+        return new MapSchema();
     }
 }

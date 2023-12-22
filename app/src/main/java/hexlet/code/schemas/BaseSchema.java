@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Predicate;
 
-public class BaseSchemas {
+public class BaseSchema {
     private Map<String, Predicate> checks = new HashMap<>();
 
     protected final void addCheck(String checkName, Predicate condition) {

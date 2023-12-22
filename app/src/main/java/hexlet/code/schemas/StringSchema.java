@@ -1,6 +1,6 @@
 package hexlet.code.schemas;
 
-public final class StringSchema extends BaseSchemas {
+public final class StringSchema extends BaseSchema {
     public StringSchema() {
         addCheck("Is string check", value -> (value == null) || (value.getClass() == String.class));
     }
