@@ -5,7 +5,7 @@ import java.util.Map;
 
 public final class MapSchema extends BaseSchema {
     public MapSchema() {
-        addCheck("It is Map?", value -> (value == null) || (value.getClass() == HashMap.class));
+        addCheck("It is Map?", value -> (value == null) || (value instanceof Map<?,?>));
     }
 
     public MapSchema required() {
